@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset ="UTF-8">
+	<title>Shaai</title>
+	<link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+	<link href="css/stylesheet.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script> 
+<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+		
+		$('#play').click(function() { $('#slider').cycle('resume'); return false; });
+		
+		$('#pause').click(function() { $('#slider').cycle('pause'); return false; });
+	}); 
+
+	$('#slider').cycle({
+	
+		fx:			'scrollHorz',
+		next:		'#next',
+		prev:		'#prev',
+		pager:		'#pager',
+		timeout:	3000,
+		speed:		1400
+	
+	});
+
+</script> 
+
+</head>
+
+<body>
+	<div class="container">
+	<header>
+	</header>
+
+	<div class="top-left">
+		<img src="img/photo.jpg">
+		<figcaption><small>That's me.</small></figcaption>
+	</div>
+
+	<div class="middle-right">
+		<p class="contact"><strong>Shaai Sattar LaFollette</strong><br />
+		23 Cross Street, Unit 1<br /> 
+		Somerville, MA 02145<br />
+		shaai.sattar@gmail.com<br />
+		Cell: 919-923-6864</p>
+	</div>
+
+	<div class="top-right"> 
+ 		<p>Hello! My name is Shaai and I'm a designer currently living in Somerville, MA. I have a background in Industrial Design and have also worked in graphic design and online advertising in the past. I have a passion for creativity and empowering others. I have a little bit of experience in html5, css, jQuery and Bootstrap and I am eager to build a stronger foundation in programming so I can go on to create things that are meaningful. That's why I am excited to get started with this course and learn some valuable skills! </p>
+ 	</div>
+
+	<div class="middle-middle">
+		<center><img src="img/avatar.png"></center>
+	</div>
+
+	<div class="middle-left">
+		<p class="font">Check out the photos below!</p>
+	</div>
+
+
+	<div class="bottom-right">
+		<img src="img/1.jpg">
+		<figcaption><small>Vacation in 2013 at Pueblos Rancheros, <br /> New Mexico.</small></figcaption>
+	</div>
+
+<!--IMAGE-SLIDER-->
+<div id="carousel">
+
+		<div id="pager"></div>
+		<div id="pause">&asymp;</div>
+		<div id="play">&Delta;</div>
+		<div id="next">&rang;</div>
+		<div id="prev">&lang;</div>
+
+		<div id="slider">
+          <img src="img/4.jpg">
+          <img src="img/2.jpg">
+          <img src="img/3.jpg">
+		</div>
+</div> 
+
+</div><!--End-Container-->
+</body>
